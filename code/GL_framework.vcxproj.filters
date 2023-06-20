@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="include\imgui\imgui.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_demo.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_draw.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_impl_sdl_gl3.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\Cube.cpp">
+      <Filter>objects - source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\Axis.cpp">
+      <Filter>objects - source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\TexturePlane.cpp">
+      <Filter>objects - source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderers\AA2.cpp">
+      <Filter>renderers - source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderers\ExPlacementTriangles.cpp">
+      <Filter>renderers - source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderers\Renderer.cpp">
+      <Filter>renderers - source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\Billboard.cpp">
+      <Filter>objects - source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\GL_framework.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Program.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stb_image.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\TexturePlane.h">
+      <Filter>objects - include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Cube.h">
+      <Filter>objects - include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Axis.h">
+      <Filter>objects - include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderers\Renderer.h">
+      <Filter>renderers - include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderers\ExPlacementTriangles.h">
+      <Filter>renderers - include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderers\AA2.h">
+      <Filter>renderers - include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Billboard.h">
+      <Filter>objects - include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgui.ini" />
+    <None Include="shaders\triangle.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\triangle.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Axis.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Axis.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Cube.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Cube.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Texture.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Texture.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Normals.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Normals.geom">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Normals.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\Billboard.vert" />
+    <None Include="shaders\Billboard.geom" />
+    <None Include="shaders\Billboard.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{74ab5a78-08bb-4b07-9f8f-e25f51e63b32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code">
+      <UniqueIdentifier>{8b856f1e-cb6a-4277-b1e3-a3f39ef2b2da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{2647b63e-8d49-4b4e-804a-228898ed7039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="textures">
+      <UniqueIdentifier>{abf6f7e5-fe78-4798-9b0a-ad677c47cf89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects - source">
+      <UniqueIdentifier>{c36eaabf-2573-4ea9-a702-083814050e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects - include">
+      <UniqueIdentifier>{33619ac3-4eaf-4b08-ba42-82e026498cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="renderers - include">
+      <UniqueIdentifier>{eee6433d-5b50-4c6f-b63f-b98c13991716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="renderers - source">
+      <UniqueIdentifier>{3559b9f9-0931-45ea-bf53-596a950b9f2c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\container.jpg">
+      <Filter>textures</Filter>
+    </Image>
+    <Image Include="textures\doritos.png">
+      <Filter>textures</Filter>
+    </Image>
+    <Image Include="textures\grasa.jpg">
+      <Filter>textures</Filter>
+    </Image>
+    <Image Include="textures\megusta.png">
+      <Filter>textures</Filter>
+    </Image>
+    <Image Include="textures\servicio.jpg">
+      <Filter>textures</Filter>
+    </Image>
+    <Image Include="textures\smol.jpg">
+      <Filter>textures</Filter>
+    </Image>
+    <Image Include="textures\thomas.jpg">
+      <Filter>textures</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
