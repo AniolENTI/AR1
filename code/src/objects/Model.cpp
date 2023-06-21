@@ -86,7 +86,7 @@ void Model::draw()
 	objMat = view * model;
 	glUniformMatrix4fv(objMatLoc, 1, GL_FALSE, glm::value_ptr(objMat));
 	glUniformMatrix4fv(mvpMatLoc, 1, GL_FALSE, glm::value_ptr(cam._MVP));
-	glDrawArrays(GL_TRIANGLES, 0, 678424528);
+	glDrawArraysInstanced(GL_TRIANGLES, 0, vertices.size(), 10);
 
 	moviment++;
 }
