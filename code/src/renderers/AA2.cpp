@@ -62,7 +62,7 @@ void AA2::render(float dt)
 	explodingCube->draw();
 
 	billboard->SetTransforms(cam);
-	billboard->Render();
+	billboard->draw();
 }
 
 #pragma region DefineTextures

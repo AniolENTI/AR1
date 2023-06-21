@@ -1,7 +1,16 @@
 #include <objects/Model.h>
 
+extern bool loadOBJ(
+	const char* path,
+	std::vector < glm::vec3 >& out_vertices,
+	std::vector < glm::vec2 >& out_uvs,
+	std::vector < glm::vec3 >& out_normals
+);
+
 Model::Model()
 {
+	loadModel();
+
 	const char* vertShaderFile = "shaders/triangle.vert";
 	const char* fragShaderFile = "shaders/triangle.frag";
 
@@ -80,4 +89,9 @@ void Model::draw()
 	glDrawArrays(GL_TRIANGLES, 0, 678424528);
 
 	moviment++;
+}
+
+void Model::loadModel()
+{
+	bool res = loadOBJ(path, vertices, uvs, normals);
 }

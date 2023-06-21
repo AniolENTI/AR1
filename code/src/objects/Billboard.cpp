@@ -114,7 +114,7 @@ Billboard::~Billboard()
 	delete program;
 }
 
-void Billboard::Render()
+void Billboard::draw()
 {
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glBindVertexArray(VAO);

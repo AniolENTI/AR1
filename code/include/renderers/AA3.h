@@ -2,7 +2,7 @@
 #include <renderers/Renderer.h>
 #include <objects/TexturePlane.h>
 #include <objects/Billboard.h>
-//#include <objects/Model.h>
+#include <objects/Model.h>
 #include <stdlib.h>
 
 class AA3 : public Renderer
@@ -31,4 +31,5 @@ private:
 	char* pathBillboard = "textures/thomas.jpg";
 	
 	//COTXE
+	Model* model;
 };

@@ -146,6 +146,7 @@ xcopy "$(ProjectDir)libs\SDL2.dll" "$(OutDir)" /y /d</Command>
     <ClCompile Include="src\objects\Axis.cpp" />
     <ClCompile Include="src\objects\Billboard.cpp" />
     <ClCompile Include="src\objects\Cube.cpp" />
+    <ClCompile Include="src\objects\Model.cpp" />
     <ClCompile Include="src\objects\TexturePlane.cpp" />
     <ClCompile Include="src\renderers\AA2.cpp" />
     <ClCompile Include="src\renderers\AA3.cpp" />
@@ -157,6 +158,7 @@ xcopy "$(ProjectDir)libs\SDL2.dll" "$(OutDir)" /y /d</Command>
     <ClInclude Include="include\objects\Axis.h" />
     <ClInclude Include="include\objects\Billboard.h" />
     <ClInclude Include="include\objects\Cube.h" />
+    <ClInclude Include="include\objects\Model.h" />
     <ClInclude Include="include\objects\TexturePlane.h" />
     <ClInclude Include="include\Program.h" />
     <ClInclude Include="include\renderers\AA2.h" />

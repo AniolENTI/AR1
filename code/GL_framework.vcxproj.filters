@@ -39,6 +39,7 @@
     </ClCompile>
     <ClCompile Include="src\ObjectLoader.cpp" />
     <ClCompile Include="src\renderers\AA3.cpp" />
+    <ClCompile Include="src\objects\Model.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GL_framework.h">
@@ -72,6 +73,7 @@
       <Filter>objects - include</Filter>
     </ClInclude>
     <ClInclude Include="include\renderers\AA3.h" />
+    <ClInclude Include="include\objects\Model.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="imgui.ini" />
