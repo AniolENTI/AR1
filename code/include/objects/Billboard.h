@@ -11,11 +11,9 @@ public:
     Billboard(glm::vec3 topRight, glm::vec3 topLeft, glm::vec3 botLeft, glm::vec3 botRight, char* path);
     ~Billboard();
 
-    void Render();
+    void draw();
 
     void SetTransforms(CameraTransforms cam);
-
-    void SetColorTextureUnit(unsigned int TextureUnit);
 
 private:
     GLuint VAO;
