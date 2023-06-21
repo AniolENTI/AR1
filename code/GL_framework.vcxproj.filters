@@ -37,6 +37,7 @@
     <ClCompile Include="src\objects\Billboard.cpp">
       <Filter>objects - source</Filter>
     </ClCompile>
+    <ClCompile Include="src\ObjectLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GL_framework.h">
