@@ -3,7 +3,8 @@
 AA3::AA3(int width, int height) : Renderer(width, height)
 {
 	oneCar = true;
-	freeCam = false;
+	freeCam = true;
+
 	if(oneCar)
 		model = new Model();
 	else
@@ -125,7 +126,7 @@ void AA3::render(float dt)
 	if (!freeCam)
 	{
 		setPanv1(0.0f - moviment.x);
-		setPanv2(-10.0f);
+		setPanv2(7.0f);
 		setPanv3(20.0f - moviment.z);
 
 		if (goForward)
