@@ -3,7 +3,7 @@
 AA3::AA3(int width, int height) : Renderer(width, height)
 {
 	oneCar = true;
-
+	freeCam = false;
 	if(oneCar)
 		model = new Model();
 	else
@@ -119,6 +119,51 @@ void AA3::render(float dt)
 		mirror->setTransforms(cam);
 		mirror->setTexture(fbo_tex);
 		mirror->draw();
+	}
+
+	//Camera Segueix el cotxe
+	if (!freeCam)
+	{
+		setPanv1(0.0f - moviment.x);
+		setPanv2(-10.0f);
+		setPanv3(20.0f - moviment.z);
+
+		if (goForward)
+		{
+			moviment.x++;
+			if (moviment.x >= 25)
+			{
+				goForward = false;
+				goRight = true;
+			}
+		}
+		else if (goRight)
+		{
+			moviment.z++;
+			if (moviment.z >= 25)
+			{
+				goRight = false;
+				goBackward = true;
+			}
+		}
+		else if (goBackward)
+		{
+			moviment.x--;
+			if (moviment.x <= -25)
+			{
+				goBackward = false;
+				goLeft = true;
+			}
+		}
+		else if (goLeft)
+		{
+			moviment.z--;
+			if (moviment.z <= -25)
+			{
+				goLeft = false;
+				goForward = true;
+			}
+		}
 	}
 }
 
