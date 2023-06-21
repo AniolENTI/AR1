@@ -52,6 +52,21 @@ Model::Model()
 
 	// Not necessary, but recomendable as it ensures that we will not use the VAO accidentally.
 	glBindVertexArray(0);
+
+
+	int index = 0;
+	float offset = 0.1f;
+	for (int y = -2; y < 2; y += 2)
+	{
+		for (int x = -5; x < 5; x += 2)
+		{
+			glm::vec3 translation;
+			translation.x = (float)x / 10.0f + offset;
+			translation.y = 0;
+			translation.z = (float)y / 10.0f + offset;
+			translations[index++] = translation;
+		}
+	}
 }
 
 Model::~Model()
@@ -75,6 +90,7 @@ void Model::draw()
 	GLuint colorLoc = program->getUniform("aCol");
 	GLuint objMatLoc = program->getUniform("objMat");
 	GLuint mvpMatLoc = program->getUniform("mvpMat");
+	GLuint offsetLoc = program->getUniform("offsets");
 
 	// Declare all the matrices that we will use
 	glm::mat4 model, view, objMat;
@@ -82,12 +98,14 @@ void Model::draw()
 	// Draw model
 	glUniform4f(colorLoc, 0.9f, 0.1f, 0.1f, 1.0f);
 	model = glm::rotate(glm::mat4(), glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-	view = glm::translate(glm::mat4(), glm::vec3(0.0f - moviment, -10.0f, -20.0f));
+	view = glm::translate(glm::mat4(), glm::vec3(0.0f, -10.0f, -20.0f));
 	objMat = view * model;
+	
+	glUniform1fv(offsetLoc, 10 , glm::value_ptr(translations[0]));
 	glUniformMatrix4fv(objMatLoc, 1, GL_FALSE, glm::value_ptr(objMat));
 	glUniformMatrix4fv(mvpMatLoc, 1, GL_FALSE, glm::value_ptr(cam._MVP));
 	glDrawArraysInstanced(GL_TRIANGLES, 0, vertices.size(), 10);
-
+	
 	moviment++;
 }
 

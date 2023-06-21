@@ -26,4 +26,7 @@ private:
 	std::vector <glm::vec2> uvs;
 	std::vector <glm::vec3> normals;
 	char* path = "objects/cotxe.obj";
+
+	//instancing
+	glm::vec3 translations[10];
 };
