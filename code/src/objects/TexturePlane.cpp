@@ -116,6 +116,11 @@ void TexturePlane::setTransforms(CameraTransforms cam)
 	this->cam = cam;
 }
 
+void TexturePlane::setTexture(GLuint tex)
+{
+	this->texture = tex;
+}
+
 void TexturePlane::draw()
 {
 	glBindTexture(GL_TEXTURE_2D, texture);

@@ -21,7 +21,6 @@ private:
 	glm::vec3 botRight = { 50.0f, -10.75f,  50.0f };
 	char* path = "textures/gotele.jpg";
 
-
 	//BILLBOARD
 	Billboard* billboard;
 	glm::vec3 topRightBillboard = { 10.5f, 10.5f, -1.0f };
@@ -32,4 +31,9 @@ private:
 	
 	//COTXE
 	Model* model;
+
+	//MIRALL
+	TexturePlane* mirror;
+	GLuint fbo, fbo_tex;
+	void setupFBO();
 };

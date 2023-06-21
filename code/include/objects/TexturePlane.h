@@ -10,6 +10,7 @@ public:
 	TexturePlane(glm::vec3 topRight, glm::vec3 topLeft, glm::vec3 botLeft, glm::vec3 botRight, char* path);
 	~TexturePlane();
 	void setTransforms(CameraTransforms cam);
+	void setTexture(GLuint tex);
 	void draw();
 private:
 	GLuint VAO;
