@@ -189,6 +189,7 @@ xcopy "$(ProjectDir)libs\SDL2.dll" "$(OutDir)" /y /d</Command>
     <Image Include="textures\doritos.png" />
     <Image Include="textures\gotele.jpg" />
     <Image Include="textures\grasa.jpg" />
+    <Image Include="textures\gris.jpg" />
     <Image Include="textures\megusta.png" />
     <Image Include="textures\servicio.jpg" />
     <Image Include="textures\smol.jpg" />

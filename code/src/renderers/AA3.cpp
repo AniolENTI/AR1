@@ -5,7 +5,7 @@ AA3::AA3(int width, int height) : Renderer(width, height)
 	texture = new TexturePlane(topRight, topLeft, botLeft, botRight, path);
 	billboard = new Billboard(topRightBillboard, topLeftBillboard, botLeftBillboard, botRightBillboard, pathBillboard);
 	model = new Model();
-	mirror = new TexturePlane(topRightMirror, topLeftMirror, botLeftMirror, botRightMirror, path);
+	mirror = new TexturePlane(topRightMirror, topLeftMirror, botLeftMirror, botRightMirror, pathMirror);
 	this->width = width;
 	this->height = height;
 	setupFBO();

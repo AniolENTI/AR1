@@ -39,7 +39,7 @@ private:
 	glm::vec3 topLeftMirror = { -10.5f, 10.5f, -50.0f };
 	glm::vec3 botLeftMirror = { -10.5f, -10.5f, -50.0f };
 	glm::vec3 botRightMirror = { 10.5f, -10.5f, -50.0f };
-	char* pathMirall = "textures/gotele.jpg";
+	char* pathMirror = "textures/gris.jpg";
 	int width, height;
 	void setupFBO();
 };
