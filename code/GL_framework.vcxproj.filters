@@ -149,5 +149,6 @@
     <Image Include="textures\servicio.jpg" />
     <Image Include="textures\smol.jpg" />
     <Image Include="textures\thomas.jpg" />
+    <Image Include="textures\gris.jpg" />
   </ItemGroup>
 </Project>
