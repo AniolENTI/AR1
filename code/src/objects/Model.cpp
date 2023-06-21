@@ -62,7 +62,7 @@ Model::Model()
 		{
 			glm::vec3 translation;
 			translation.x = (float)x / 10.0f + offset;
-			translation.y = 0;
+			translation.y = 0.0f;
 			translation.z = (float)y / 10.0f + offset;
 			translations[index++] = translation;
 		}
@@ -101,11 +101,12 @@ void Model::draw()
 	view = glm::translate(glm::mat4(), glm::vec3(0.0f, -10.0f, -20.0f));
 	objMat = view * model;
 	
+
 	glUniform1fv(offsetLoc, 10 , glm::value_ptr(translations[0]));
 	glUniformMatrix4fv(objMatLoc, 1, GL_FALSE, glm::value_ptr(objMat));
 	glUniformMatrix4fv(mvpMatLoc, 1, GL_FALSE, glm::value_ptr(cam._MVP));
 	glDrawArraysInstanced(GL_TRIANGLES, 0, vertices.size(), 10);
-	
+		
 	moviment++;
 }
 
