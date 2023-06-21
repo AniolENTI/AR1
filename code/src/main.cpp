@@ -74,7 +74,7 @@ int main(int argc, char** argv) {
 
 	// Init scene here
 	///////////////////////////////////////////////
-	Renderer *renderer = new AA3(display_w, display_h);
+	Renderer *renderer = new AA2(display_w, display_h);
 	///////////////////////////////////////////////
 	
 	// Setup ImGui binding
