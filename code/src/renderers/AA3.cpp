@@ -2,9 +2,26 @@
 
 AA3::AA3(int width, int height) : Renderer(width, height)
 {
+	oneCar = true;
+
+	if(oneCar)
+		model = new Model();
+	else
+	{
+		modelM1 = new Model();
+		modelM2 = new Model();
+		modelM3 = new Model();
+		modelM4 = new Model();
+		modelM5 = new Model();
+		modelM6 = new Model();
+		modelM7 = new Model();
+		modelM8 = new Model();
+		modelM9 = new Model();
+		modelM10 = new Model();
+	}
+
 	texture = new TexturePlane(topRight, topLeft, botLeft, botRight, path);
 	billboard = new Billboard(topRightBillboard, topLeftBillboard, botLeftBillboard, botRightBillboard, pathBillboard);
-	model = new Model();
 	mirror = new TexturePlane(topRightMirror, topLeftMirror, botLeftMirror, botRightMirror, pathMirror);
 	this->width = width;
 	this->height = height;
@@ -15,7 +32,21 @@ AA3::~AA3()
 {
 	delete texture;
 	delete billboard;
-	delete model;
+	if (oneCar)
+		delete model;
+	else
+	{
+		delete modelM1;
+		delete modelM2;
+		delete modelM3;
+		delete modelM4;
+		delete modelM5;
+		delete modelM6;
+		delete modelM7;
+		delete modelM8;
+		delete modelM9;
+		delete modelM10;
+	}
 }
 
 void AA3::render(float dt)
@@ -26,8 +57,44 @@ void AA3::render(float dt)
 	billboard->SetTransforms(cam);
 	billboard->draw();
 
-	model->setTransforms(cam);
-	model->draw();
+	if (oneCar)
+	{
+		model->setTransforms(cam);
+		model->draw();
+	}
+	else
+	{
+		modelM1->setTransforms(cam);
+		modelM1->draw();
+
+		modelM2->setTransforms(cam);
+		modelM2->draw();
+
+		modelM3->setTransforms(cam);
+		modelM3->draw();
+
+		modelM4->setTransforms(cam);
+		modelM4->draw();
+
+		modelM5->setTransforms(cam);
+		modelM5->draw();
+
+		modelM6->setTransforms(cam);
+		modelM6->draw();
+
+		modelM7->setTransforms(cam);
+		modelM7->draw();
+
+		modelM8->setTransforms(cam);
+		modelM8->draw();
+
+		modelM9->setTransforms(cam);
+		modelM9->draw();
+
+		modelM10->setTransforms(cam);
+		modelM10->draw();
+	}
+	
 
 	//Render Mirall
 	{

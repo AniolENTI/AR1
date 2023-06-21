@@ -42,4 +42,17 @@ private:
 	char* pathMirror = "textures/gris.jpg";
 	int width, height;
 	void setupFBO();
+
+	//OPCIONAL: FORMA DOLENTA DE FER MULTIPLES COTXES I PODER CANVIAR
+	bool oneCar;
+	Model* modelM1;
+	Model* modelM2;
+	Model* modelM3;
+	Model* modelM4;
+	Model* modelM5;
+	Model* modelM6;
+	Model* modelM7;
+	Model* modelM8;
+	Model* modelM9;
+	Model* modelM10;
 };
