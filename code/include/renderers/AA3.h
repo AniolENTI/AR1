@@ -23,10 +23,10 @@ private:
 
 	//BILLBOARD
 	Billboard* billboard;
-	glm::vec3 topRightBillboard = { 10.5f, 10.5f, -1.0f };
-	glm::vec3 topLeftBillboard = { -10.5f, 10.5f, -1.0f };
-	glm::vec3 botLeftBillboard = { -10.5f, -10.5f, -1.0f };
-	glm::vec3 botRightBillboard = { 10.5f, -10.5f, -1.0f };
+	glm::vec3 topRightBillboard = { 0.5f, 0.5f, -1.0f };
+	glm::vec3 topLeftBillboard = { -0.5f, 0.5f, -1.0f };
+	glm::vec3 botLeftBillboard = { -0.5f, -0.5f, -1.0f };
+	glm::vec3 botRightBillboard = { 0.5f, -0.5f, -1.0f };
 	char* pathBillboard = "textures/thomas.jpg";
 	
 	//COTXE
@@ -35,5 +35,11 @@ private:
 	//MIRALL
 	TexturePlane* mirror;
 	GLuint fbo, fbo_tex;
+	glm::vec3 topRightMirror = { 10.5f, 10.5f, -50.0f };
+	glm::vec3 topLeftMirror = { -10.5f, 10.5f, -50.0f };
+	glm::vec3 botLeftMirror = { -10.5f, -10.5f, -50.0f };
+	glm::vec3 botRightMirror = { 10.5f, -10.5f, -50.0f };
+	char* pathMirall = "textures/gotele.jpg";
+	int width, height;
 	void setupFBO();
 };
