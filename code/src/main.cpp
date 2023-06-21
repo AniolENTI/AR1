@@ -7,8 +7,8 @@
 
 #include <GL_framework.h>
 #include <renderers/ExPlacementTriangles.h>
-#include <renderers/ExTexture.h>
 #include <renderers/AA2.h>
+#include <renderers/AA3.h>
 
 namespace {
 	const int expected_fps = 30;
@@ -74,7 +74,7 @@ int main(int argc, char** argv) {
 
 	// Init scene here
 	///////////////////////////////////////////////
-	Renderer *renderer = new AA2(display_w, display_h);
+	Renderer *renderer = new AA3(display_w, display_h);
 	///////////////////////////////////////////////
 	
 	// Setup ImGui binding

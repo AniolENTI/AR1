@@ -38,6 +38,7 @@
       <Filter>objects - source</Filter>
     </ClCompile>
     <ClCompile Include="src\ObjectLoader.cpp" />
+    <ClCompile Include="src\renderers\AA3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GL_framework.h">
@@ -70,6 +71,7 @@
     <ClInclude Include="include\objects\Billboard.h">
       <Filter>objects - include</Filter>
     </ClInclude>
+    <ClInclude Include="include\renderers\AA3.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="imgui.ini" />
@@ -137,26 +139,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="textures\container.jpg">
-      <Filter>textures</Filter>
-    </Image>
-    <Image Include="textures\doritos.png">
-      <Filter>textures</Filter>
-    </Image>
-    <Image Include="textures\grasa.jpg">
-      <Filter>textures</Filter>
-    </Image>
-    <Image Include="textures\megusta.png">
-      <Filter>textures</Filter>
-    </Image>
-    <Image Include="textures\servicio.jpg">
-      <Filter>textures</Filter>
-    </Image>
-    <Image Include="textures\smol.jpg">
-      <Filter>textures</Filter>
-    </Image>
-    <Image Include="textures\thomas.jpg">
-      <Filter>textures</Filter>
-    </Image>
+    <Image Include="textures\container.jpg" />
+    <Image Include="textures\doritos.png" />
+    <Image Include="textures\gotele.jpg" />
+    <Image Include="textures\grasa.jpg" />
+    <Image Include="textures\megusta.png" />
+    <Image Include="textures\servicio.jpg" />
+    <Image Include="textures\smol.jpg" />
+    <Image Include="textures\thomas.jpg" />
   </ItemGroup>
 </Project>

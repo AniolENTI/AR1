@@ -148,6 +148,7 @@ xcopy "$(ProjectDir)libs\SDL2.dll" "$(OutDir)" /y /d</Command>
     <ClCompile Include="src\objects\Cube.cpp" />
     <ClCompile Include="src\objects\TexturePlane.cpp" />
     <ClCompile Include="src\renderers\AA2.cpp" />
+    <ClCompile Include="src\renderers\AA3.cpp" />
     <ClCompile Include="src\renderers\ExPlacementTriangles.cpp" />
     <ClCompile Include="src\renderers\Renderer.cpp" />
   </ItemGroup>
@@ -159,6 +160,7 @@ xcopy "$(ProjectDir)libs\SDL2.dll" "$(OutDir)" /y /d</Command>
     <ClInclude Include="include\objects\TexturePlane.h" />
     <ClInclude Include="include\Program.h" />
     <ClInclude Include="include\renderers\AA2.h" />
+    <ClInclude Include="include\renderers\AA3.h" />
     <ClInclude Include="include\renderers\ExPlacementTriangles.h" />
     <ClInclude Include="include\renderers\Renderer.h" />
     <ClInclude Include="include\stb_image.h" />
@@ -183,6 +185,7 @@ xcopy "$(ProjectDir)libs\SDL2.dll" "$(OutDir)" /y /d</Command>
   <ItemGroup>
     <Image Include="textures\container.jpg" />
     <Image Include="textures\doritos.png" />
+    <Image Include="textures\gotele.jpg" />
     <Image Include="textures\grasa.jpg" />
     <Image Include="textures\megusta.png" />
     <Image Include="textures\servicio.jpg" />
