@@ -19,8 +19,10 @@ private:
 	GLuint VBO;
 	CameraTransforms cam;
 
-	float moviment = 1.0f;
-	float rotacio = 0.0f;
+	glm::vec3 moviment = glm::vec3(1.0f, 0.0f, 1.0f);
+	float rotacio = 90.0f;
+	bool goForward = true;
+	bool goBackward, goLeft, goRight = false;
 
 	std::vector <glm::vec3> vertices;
 	std::vector <glm::vec2> uvs;

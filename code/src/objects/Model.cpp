@@ -61,9 +61,9 @@ Model::Model()
 		for (int x = -5; x < 5; x += 2)
 		{
 			glm::vec3 translation;
-			translation.x = (float)x / 10.0f + offset;
+			translation.x = (float)x * 10 + offset;
 			translation.y = 0.0f;
-			translation.z = (float)y / 10.0f + offset;
+			translation.z = (float)y * 10 + offset;
 			translations[index++] = translation;
 		}
 	}
@@ -97,17 +97,56 @@ void Model::draw()
 
 	// Draw model
 	glUniform4f(colorLoc, 0.9f, 0.1f, 0.1f, 1.0f);
-	model = glm::rotate(glm::mat4(), glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-	view = glm::translate(glm::mat4(), glm::vec3(0.0f, -10.0f, -20.0f));
+	model = glm::rotate(glm::mat4(), glm::radians(rotacio), glm::vec3(0.0f, 1.0f, 0.0f));
+	view = glm::translate(glm::mat4(), glm::vec3(0.0f + moviment.x, -10.0f, -20.0f + moviment.z));
 	objMat = view * model;
 	
 
-	glUniform1fv(offsetLoc, 10 , glm::value_ptr(translations[0]));
+	glUniform3fv(offsetLoc, 10 , glm::value_ptr(translations[0]));
 	glUniformMatrix4fv(objMatLoc, 1, GL_FALSE, glm::value_ptr(objMat));
 	glUniformMatrix4fv(mvpMatLoc, 1, GL_FALSE, glm::value_ptr(cam._MVP));
 	glDrawArraysInstanced(GL_TRIANGLES, 0, vertices.size(), 10);
 		
-	moviment++;
+	if (goForward)
+	{
+		moviment.x++;
+		if (moviment.x >= 25)
+		{
+			goForward = false;
+			goRight = true;
+			rotacio = 360.0f;
+		}
+	}
+	else if (goRight)
+	{
+		moviment.z++;
+		if (moviment.z >= 25)
+		{
+			goRight = false;
+			goBackward = true;
+			rotacio = 270.0f;
+		}
+	}
+	else if (goBackward)
+	{
+		moviment.x--;
+		if (moviment.x <= -25)
+		{
+			goBackward = false;
+			goLeft = true;
+			rotacio = 180.0f;
+		}
+	}
+	else if (goLeft)
+	{
+		moviment.z--;
+		if (moviment.z <= -25)
+		{
+			goLeft = false;
+			goForward = true;
+			rotacio = 90.0f;
+		}
+	}
 }
 
 void Model::loadModel()
