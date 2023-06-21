@@ -55,15 +55,14 @@ Model::Model()
 
 
 	int index = 0;
-	float offset = 0.1f;
 	for (int y = -2; y < 2; y += 2)
 	{
 		for (int x = -5; x < 5; x += 2)
 		{
 			glm::vec3 translation;
-			translation.x = (float)x * 10 + offset;
+			translation.x = (float)x * 10;
 			translation.y = 0.0f;
-			translation.z = (float)y * 10 + offset;
+			translation.z = (float)y * 10;
 			translations[index++] = translation;
 		}
 	}

@@ -55,4 +55,11 @@ private:
 	Model* modelM8;
 	Model* modelM9;
 	Model* modelM10;
+
+	//Camera Interior
+	bool freeCam;
+	//Copia dels valors de la classe model per evitar dependencies circulars
+	glm::vec3 moviment = glm::vec3(1.0f, 0.0f, 1.0f);
+	bool goForward = true;
+	bool goBackward, goLeft, goRight = false;
 };

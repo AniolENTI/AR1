@@ -92,7 +92,7 @@ void Renderer::GLrender(float dt)
 	cam._modelView = glm::translate(cam._modelView, glm::vec3(panv[0], panv[1], panv[2]));
 	cam._cameraRotationMat = glm::rotate(glm::mat4(), rota[1], glm::vec3(1.f, 0.f, 0.f));
 	cam._cameraRotationMat = glm::rotate(cam._cameraRotationMat, rota[0], glm::vec3(0.f, 1.f, 0.f));
-
+	
 	cam._modelView *= cam._cameraRotationMat;
 
 	cam._MVP = cam._projection * cam._modelView;
@@ -112,4 +112,19 @@ void Renderer::render(float dt)
 
 void Renderer::renderGUI() {
 
+}
+
+void Renderer::setPanv1(float p1)
+{
+	panv[0] = p1;
+}
+
+void Renderer::setPanv2(float p2)
+{
+	panv[1] = p2;
+}
+
+void Renderer::setPanv3(float p3)
+{
+	panv[2] = p3;
 }

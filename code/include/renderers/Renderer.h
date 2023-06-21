@@ -28,6 +28,11 @@ public:
 	void GLmousecb(MouseEvent ev);
 	void GLResize(int width, int height);
 	void GLrender(float dt);
+
+	void setPanv1(float p1);
+	void setPanv2(float p2);
+	void setPanv3(float p3);
+
 protected:
 	float FOV = glm::radians(65.f);
 	float zNear = 1.f;
